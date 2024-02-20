@@ -20,23 +20,23 @@ public class FakeRestCountriesService implements IRestCountries {
         countryDTOList.add(countryDTO);
 
         CountryDTO countryDTO1 = new CountryDTO();
-        countryDTO.setName("FranceFake");
+        countryDTO1.setName("FranceFake");
         countryDTOList.add(countryDTO1);
 
         CountryDTO countryDTO2 = new CountryDTO();
-        countryDTO.setName("ChinaFake");
+        countryDTO2.setName("ChinaFake");
         countryDTOList.add(countryDTO2);
 
         CountryDTO countryDTO3 = new CountryDTO();
-        countryDTO.setName("CanadaFake");
+        countryDTO3.setName("CanadaFake");
         countryDTOList.add(countryDTO3);
 
         CountryDTO countryDTO4 = new CountryDTO();
-        countryDTO.setName("BrazilFake");
+        countryDTO4.setName("BrazilFake");
         countryDTOList.add(countryDTO4);
 
         CountryDTO countryDTO5 = new CountryDTO();
-        countryDTO.setName("JapanFake");
+        countryDTO5.setName("JapanFake");
         countryDTOList.add(countryDTO5);
         return countryDTOList;
     }
