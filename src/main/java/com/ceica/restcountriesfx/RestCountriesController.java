@@ -2,6 +2,7 @@ package com.ceica.restcountriesfx;
 
 import com.ceica.restcountriesfx.models.CountryDTO;
 import com.ceica.restcountriesfx.services.FakeRestCountriesService;
+import com.ceica.restcountriesfx.services.RestCountriesServices;
 import javafx.beans.Observable;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -36,7 +37,8 @@ public class RestCountriesController {
 
     @FXML
     public void initialize() {
-        FakeRestCountriesService fakeRestCountriesService = new FakeRestCountriesService();
+        RestCountriesServices fakeRestCountriesService  = new RestCountriesServices();
+
         comboRegions.getItems().addAll(fakeRestCountriesService.getRegions());
         comboRegions.setOnAction(e -> {
             if (comboRegions.getSelectionModel().getSelectedItem() != null) {

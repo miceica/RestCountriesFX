@@ -11,6 +11,17 @@ public class CountryDTO {
     public CountryDTO() {
     }
 
+    public static CountryDTO from(CountryDAO countryDAO){
+        CountryDTO countryDTO = new CountryDTO();
+        countryDTO.setName(countryDAO.name.common);
+        countryDTO.setFlag(countryDAO.flags.png);
+        countryDTO.setCapital(countryDAO.capital[0]);
+        countryDTO.setPopulation(countryDAO.population);
+        String keyCurrency = (String) countryDAO.currencies.keySet().toArray()[0];
+        countryDTO.setCoin(countryDAO.currencies.get(keyCurrency).name);
+        return countryDTO;
+    }
+
     public String getName() {
         return name;
     }

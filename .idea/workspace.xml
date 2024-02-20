@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58a376b0-972d-439d-a762-5e40dc7fcfa7" name="Changes" comment="Interfaz">
+    <list default="true" id="58a376b0-972d-439d-a762-5e40dc7fcfa7" name="Changes" comment="Interfaz terminada">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/CountryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/Flag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/services/RestCountriesServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/RestCountriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/RestCountriesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/services/FakeRestCountriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/services/FakeRestCountriesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ceica/restcountriesfx/restCountries-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/restcountriesfx/restCountries-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/CountryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/models/CountryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +51,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.RestCountriesApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/pruebaFX-master"
+    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/pruebasHttp",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,12 +123,42 @@
       <option name="project" value="LOCAL" />
       <updated>1708372206212</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Interfaz terminada">
+      <option name="closed" value="true" />
+      <created>1708449888445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708449888445</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de proyecto" />
     <MESSAGE value="Interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaz" />
+    <MESSAGE value="Interfaz terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaz terminada" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/RestCountriesApplication.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/RestCountriesApplication.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/restcountriesfx/RestCountriesController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
