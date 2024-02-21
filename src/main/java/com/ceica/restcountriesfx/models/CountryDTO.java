@@ -7,18 +7,30 @@ public class CountryDTO {
     private String capital;
     private String coin;
     private int population;
+    private String cca3;
 
     public CountryDTO() {
     }
 
-    public static CountryDTO from(CountryDAO countryDAO){
+    public static CountryDTO from(CountryDAO countryDAO) {
         CountryDTO countryDTO = new CountryDTO();
         countryDTO.setName(countryDAO.name.common);
         countryDTO.setFlag(countryDAO.flags.png);
-        countryDTO.setCapital(countryDAO.capital[0]);
+        String capital = "";
+        if (countryDAO.capital != null) {
+            if (countryDAO.capital.length > 0) {
+                capital = countryDAO.capital[0];
+            }
+        }
+        countryDTO.setCapital(capital);
         countryDTO.setPopulation(countryDAO.population);
-        String keyCurrency = (String) countryDAO.currencies.keySet().toArray()[0];
-        countryDTO.setCoin(countryDAO.currencies.get(keyCurrency).name);
+        String coin = "";
+        if (countryDAO.currencies != null) {
+            String keyCurrency = (String) countryDAO.currencies.keySet().toArray()[0];
+            coin = countryDAO.currencies.get(keyCurrency).name;
+        }
+        countryDTO.setCoin(coin);
+        countryDTO.setCca3(countryDAO.cca3);
         return countryDTO;
     }
 
@@ -69,4 +81,8 @@ public class CountryDTO {
     public void setPopulation(int population) {
         this.population = population;
     }
+
+    public String getCca3() {return cca3;}
+
+    public void setCca3(String cca3) {this.cca3 = cca3;}
 }

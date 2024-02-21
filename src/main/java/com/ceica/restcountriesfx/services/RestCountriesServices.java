@@ -42,13 +42,14 @@ public class RestCountriesServices implements IRestCountries {
 
     @Override
     public List<CountryDTO> getCountriesByRegion(String region) {
-        String url = "https://restcountries.com/v3.1/region/"+region;
+        String url = "https://restcountries.com/v3.1/region/" + region;
         List<CountryDTO> countryDTOList = new ArrayList<>();
         try {
             String datos = getDataUrl(url);
             Gson gson = new Gson();
-            List<CountryDAO> objects = gson.fromJson(datos, new TypeToken<List<CountryDAO>>(){}.getType());
-            for (CountryDAO countryDAO:objects){
+            List<CountryDAO> objects = gson.fromJson(datos, new TypeToken<List<CountryDAO>>() {
+            }.getType());
+            for (CountryDAO countryDAO : objects) {
                 countryDTOList.add(CountryDTO.from(countryDAO));
             }
 
@@ -60,7 +61,33 @@ public class RestCountriesServices implements IRestCountries {
 
     @Override
     public CountryDTO getCountriesByName(String name) {
-        return null;
+        String nameFormatted = name.split(" ")[0];
+        String url = "https://restcountries.com/v3.1/name/" + nameFormatted;
+        CountryDTO countryDTO = null;
+        try {
+            String datos = getDataUrl(url);
+            Gson gson = new Gson();
+            CountryDAO[] countryDAO = gson.fromJson(datos, CountryDAO[].class);
+            countryDTO = CountryDTO.from(countryDAO[0]);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return countryDTO;
+    }
+
+    @Override
+    public CountryDTO getCountryByCca3(String cca3) {
+        String url = "https://restcountries.com/v3.1/alpha/" + cca3;
+        CountryDTO countryDTO = null;
+        try {
+            String datos = getDataUrl(url);
+            Gson gson = new Gson();
+            CountryDAO[] countryDAO = gson.fromJson(datos, CountryDAO[].class);
+            countryDTO = CountryDTO.from(countryDAO[0]);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return countryDTO;
     }
 
     private String getDataUrl(String url) throws IOException {

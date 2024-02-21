@@ -52,4 +52,9 @@ public class FakeRestCountriesService implements IRestCountries {
         countryDTO.setPopulation(38000000);
         return countryDTO;
     }
+
+    @Override
+    public CountryDTO getCountryByCca3(String cca3) {
+        return null;
+    }
 }

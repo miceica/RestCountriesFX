@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ceica.restcountriesfx.RestCountriesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="475.0" style="-fx-background-color: #BDBDBD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ceica.restcountriesfx.RestCountriesController">
     <children>
         <ComboBox fx:id="comboRegions" layoutX="29.0" layoutY="33.0" prefWidth="150.0" promptText="Regions" />
         <TableView fx:id="tblCountries" layoutX="29.0" layoutY="83.0" prefHeight="337.0" prefWidth="150.0">

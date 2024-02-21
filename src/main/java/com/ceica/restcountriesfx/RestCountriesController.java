@@ -37,7 +37,7 @@ public class RestCountriesController {
 
     @FXML
     public void initialize() {
-        RestCountriesServices fakeRestCountriesService  = new RestCountriesServices();
+        RestCountriesServices fakeRestCountriesService = new RestCountriesServices();
 
         comboRegions.getItems().addAll(fakeRestCountriesService.getRegions());
         comboRegions.setOnAction(e -> {
@@ -48,9 +48,10 @@ public class RestCountriesController {
                 tblCountries.setItems(observableList);
             }
         });
-        tblCountries.setOnMouseClicked(e -> {
-            String countryName = tblCountries.getSelectionModel().getSelectedItem().getName();
-            CountryDTO countryDTO = fakeRestCountriesService.getCountriesByName(countryName);
+
+        tblCountries.setOnKeyPressed(e -> {
+            String countryCca3 = tblCountries.getSelectionModel().getSelectedItem().getCca3();
+            CountryDTO countryDTO = fakeRestCountriesService.getCountryByCca3(countryCca3);
             txtCountryCapital.setText(countryDTO.getCapital());
             txtCountryName.setText(countryDTO.getName());
             txtCountryCoin.setText(countryDTO.getCoin());
@@ -59,6 +60,16 @@ public class RestCountriesController {
             imgFlag.setImage(image);
         });
 
+        tblCountries.setOnMouseClicked(e -> {
+            String countryCca3 = tblCountries.getSelectionModel().getSelectedItem().getCca3();
+            CountryDTO countryDTO = fakeRestCountriesService.getCountryByCca3(countryCca3);
+            txtCountryCapital.setText(countryDTO.getCapital());
+            txtCountryName.setText(countryDTO.getName());
+            txtCountryCoin.setText(countryDTO.getCoin());
+            txtCountryPopulation.setText(String.valueOf((countryDTO.getPopulation())));
+            Image image = new Image(countryDTO.getFlag());
+            imgFlag.setImage(image);
+        });
         columCountryName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getName()));
     }
 
